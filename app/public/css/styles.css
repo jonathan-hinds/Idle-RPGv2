@@ -1,0 +1,277 @@
+/* Base Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.03);
+    font-weight: 500;
+}
+
+/* Item Cards */
+.item-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.item-card.weapon {
+    border-left: 4px solid #fd7e14;
+}
+
+.item-card.armor {
+    border-left: 4px solid #6c757d;
+}
+
+/* Ability Cards */
+.ability-card {
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.ability-card:hover {
+    transform: translateY(-2px);
+}
+
+.ability-card.physical {
+    border-left: 4px solid #fd7e14;
+}
+
+.ability-card.magic {
+    border-left: 4px solid #0d6efd;
+}
+
+.ability-card.heal {
+    border-left: 4px solid #198754;
+}
+
+.ability-card.buff {
+    border-left: 4px solid #198754;
+}
+
+.ability-card.dot {
+    border-left: 4px solid #dc3545;
+}
+
+.ability-card.periodic {
+    border-left: 4px solid #0dcaf0;
+}
+
+/* Rotation Styling */
+.rotation-container {
+    min-height: 100px;
+    border: 2px dashed #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rotation-container.active {
+    border-color: #0d6efd;
+}
+
+/* Battle Log */
+.battle-log {
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-family: monospace;
+}
+
+.battle-log .player-action {
+    color: #198754;
+}
+
+.battle-log .opponent-action {
+    color: #dc3545;
+}
+
+.battle-log .system-message {
+    color: #6c757d;
+}
+
+/* Health and Mana Bars */
+.resource-bar {
+    height: 20px;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.health-bar {
+    background-color: #dc3545;
+}
+
+.mana-bar {
+    background-color: #0d6efd;
+}
+
+/* Progress Bars */
+.progress {
+    height: 20px;
+    margin-bottom: 0.5rem;
+}
+
+/* Animation for Battle */
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.flash {
+    animation: flash 0.5s;
+}
+
+/* Status Effects */
+.effect-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+.effect-buff {
+    background-color: #198754;
+}
+
+.effect-debuff {
+    background-color: #dc3545;
+}
+
+.effect-dot {
+    background-color: #fd7e14;
+}
+
+/* Tab Content Animation */
+.tab-content {
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Challenge Mode */
+.challenge-progress {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Adventure Mode */
+.adventure-progress-bar {
+    height: 25px;
+}
+
+.adventure-log {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.adventure-log .combat {
+    color: #dc3545;
+}
+
+.adventure-log .item {
+    color: #6f42c1;
+}
+
+.adventure-log .gold {
+    color: #fd7e14;
+}
+
+.adventure-log .exp {
+    color: #0d6efd;
+}
+
+/* Login/Register Form */
+.auth-card {
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.nav-tabs .nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #0d6efd;
+}
+
+/* Attribute Badge */
+.attribute-badge {
+    background-color: #0d6efd;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    min-width: 2.5rem;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Equipment Slots */
+.equipment-slot {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    min-height: 150px;
+}
+
+.empty-slot-message {
+    color: #6c757d;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Interactive Tooltips */
+.tooltip-inner {
+    max-width: 300px;
+    text-align: left;
+}
+
+/* Utility Classes */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.border-bottom-dashed {
+    border-bottom: 1px dashed #dee2e6;
+}
+
+.sticky-top-offset {
+    top: 1rem;
+}
+
+/* Modals */
+.modal-lg {
+    max-width: 800px;
+}
+
+/* Small screens adjustments */
+@media (max-width: 768px) {
+    .equipment-slot {
+        min-height: 100px;
+    }
+}
